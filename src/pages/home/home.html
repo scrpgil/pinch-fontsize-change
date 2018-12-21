@@ -1,14 +1,26 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Ionic Blank
+      PinchInOut Change FontSize
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+  <div class="pinch-area"
+       pinch
+       (pinchend)="onPinchEnd($event)"
+       (pinchmove)="onPinchMove($event)"
+       >
+       <div class="u-aa"
+            [style.fontSize.px]="fontSize"
+            [style.lineHeight.px]="fontSize + 2"
+            >
+            　 ∧＿∧
+            　（　´∀｀）
+            　（　　　　）
+            　｜ ｜　|
+            　（_＿）＿）
+       </div>
+  </div>
 </ion-content>
